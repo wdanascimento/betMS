@@ -1,12 +1,12 @@
-package br.com.betMS.betMS;
+package br.com.betMS;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class BetMsApplication {
+public class AppBetMS {
 
 	public static void main(String[] args) {
-		SpringApplication.run(BetMsApplication.class, args);
+		SpringApplication.run(AppBetMS.class, args);
 	}
 }

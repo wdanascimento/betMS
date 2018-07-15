@@ -11,6 +11,7 @@ import javax.json.Json;
 import javax.json.JsonObject;
 import javax.json.JsonReader;
 
+import org.springframework.boot.SpringApplication;
 //import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
@@ -18,7 +19,8 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
 public class AppBetMS {
 
 	public static void main(String[] args) throws IOException {
-		//SpringApplication.run(AppBetMS.class, args);
+		
+		SpringApplication.run(AppBetMS.class, args);
 		
 		int numeroConcurso = 2;
 		
@@ -33,12 +35,14 @@ public class AppBetMS {
         JsonReader jr = Json.createReader(is);
         JsonObject concursoMegaSena = jr.readObject();
         
-        String resultado   = concursoMegaSena.get("resultadoOrdenado").toString().replace("\"", "");;
+        String resultado   = concursoMegaSena.get("resultadoOrdenado").toString().replace("\"", "");
 		String dataSorteio = concursoMegaSena.get("dataStr").toString().replace("\"", "");
         String dezenas[] = resultado.split("-");
         String dataSeparada[] = dataSorteio.split("/");
         
         System.out.println(concursoMegaSena.get("concurso"));
+        System.out.println(concursoMegaSena.get("concursoAnterior").toString().replace("\"", ""));
+        System.out.println(concursoMegaSena.get("proximoConcurso").toString().replace("\"", ""));
         System.out.println(resultado); //imprime resultado ordenado
 
         System.out.println(dezenas[0]); //imprime dezena 1

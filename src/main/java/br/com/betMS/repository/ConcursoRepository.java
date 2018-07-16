@@ -7,4 +7,6 @@ import br.com.betMS.model.Concurso;
 
 @Repository
 public interface ConcursoRepository extends CrudRepository<Concurso, Long> {
+	
+	
 }

@@ -6,7 +6,7 @@
 	<groupId>br.com.betMS</groupId>
 	<artifactId>betMS</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<packaging>jar</packaging>
+	<packaging>war</packaging>
 
 	<name>betMS</name>
 	<description>Demo project for Spring Boot</description>
@@ -34,8 +34,8 @@
 			<artifactId>spring-boot-starter-data-jpa</artifactId>
 		</dependency>
         <dependency>
-            <groupId>com.h2database</groupId>
-            <artifactId>h2</artifactId>
+            <groupId>mysql</groupId>
+            <artifactId>mysql-connector-java</artifactId>
         </dependency>
 		<dependency>
 			<groupId>org.springframework.boot</groupId>

@@ -40,7 +40,7 @@ public class ConcursoDTO {
     	
         return concursoDAO;
     }
-    
+
 	public Integer getConcurso() {
 		return concurso;
 	}
@@ -88,5 +88,12 @@ public class ConcursoDTO {
 	}
 	public void setSgUf(String sgUf) {
 		this.sgUf = sgUf;
+	}
+	
+	@Override
+	public String toString() {
+		return "ConcursoDTO [concurso=" + concurso + ", concursoAnterior=" + concursoAnterior + ", proximoConcurso="
+				+ proximoConcurso + ", resultadoOrdenado=" + resultadoOrdenado + ", dataSorteio=" + dataSorteio
+				+ ", deLocalSorteio=" + deLocalSorteio + ", noCidade=" + noCidade + ", sgUf=" + sgUf + "]";
 	}
 }
